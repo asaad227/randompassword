@@ -1,35 +1,33 @@
-function passwordGenerator(input, characters,  capitalLetters, nums, mix){
+function passwordGenerator(input, characters, capitalLetters, lowercase,  nums, symbol){
     const alpha = Array.from(Array(94)).map((e, i)=> i+33);
     const newArr = alpha.map((e)=> String.fromCharCode(e));
     var password = [];
     const re = /[A-Z]/g
-    const reNum = /[0-9]/g
-    const mixed = /[aA-zZ 0-9]/g
-    const capNum = /[A-Z 0-9]/g
+    const num= /[0-9]/g
+    const lower = /[a-z]/g
+    const punctuation = /[.*+?^${}()|[\]\\]/g
+
    if(capitalLetters){
     const cap = newArr.join("").match(re);
-    console.log("i am ", cap)
     for(let i = 0; i < input; i++){
         password.push(cap[Math.ceil(Math.random()* cap.length-1)])
     }
     }
-   
+    if(lowercase){
+        const cap = newArr.join("").match(lower);
+        for(let i = 0; i < input; i++){
+            password.push(cap[Math.ceil(Math.random()* cap.length-1)])
+        }
+        }
   
    if(nums){
-    const cap = newArr.join("").match(reNum);
+    const cap = newArr.join("").match(num);
     for(let i = 0; i < input; i++){
         password.push(cap[Math.ceil(Math.random()* cap.length-1)])
     }
    }
-   if(mix){
-    const cap = newArr.join("").match(mixed);
-    for(let i = 0; i < input; i++){
-        password.push(cap[Math.ceil(Math.random()* cap.length-1)])
-    }
-   }
-
-   if(nums && capitalLetters){
-    const cap = newArr.join("").match(capNum);
+   if(symbol){
+    const cap = newArr.join("").match(punctuation);
     for(let i = 0; i < input; i++){
         password.push(cap[Math.ceil(Math.random()* cap.length-1)])
     }
@@ -58,13 +56,14 @@ function inputV(){
 
 
 function generate(){
-    const mixed = document.querySelector(".mixed").checked;
     const characters = document.querySelector(".letters").checked
     const upper = document.querySelector(".cap").checked;
+    const lower = document.querySelector(".lowercase").checked;
     const num = document.querySelector(".nums").checked;
+    const symbol = document.querySelector(".symbol").checked;
     const inputValue = document.querySelector(".inputNum").value;
-    console.log(inputValue, characters, upper, num, mixed)
-    const password = passwordGenerator(inputValue, characters, upper, num, mixed);
+
+    const password = passwordGenerator(inputValue, characters, upper, lower, num, symbol);
     console.log(password)
     document.querySelector(".result").value = `${password}`
 }

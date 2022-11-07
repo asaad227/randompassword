@@ -14,8 +14,9 @@
 .flex-box{
     display: flex;
     width: 250px;
-    height: 475px;
+    height: 490px;
     flex-direction: column;
+    background-color: #b3acea4d;
     font-style: oblique;
     padding: 5px;
     box-shadow: 3px 3px 3px 3px #888888;
@@ -26,8 +27,8 @@
 .settings{
   margin: 5px;
   font-style: oblique;
- text-shadow: 0.5px 1px #901010; ;
-  color: rgb(180, 158, 134);
+ text-shadow: 0.5px 1px #109076; ;
+  color: rgb(114, 67, 18);
 }
 
 label{
@@ -38,22 +39,47 @@ label{
   background-color: bisque;
   border-radius: 5px;
   margin: 5px;
+  text-shadow: 0.5px 1px #d1b3b3; ;
 }
 #myInput{
-  margin: 10px;
+  margin: 5px;
   padding: 5px;
   text-align: center;
   box-shadow: 3px 3px 3px 3px #888888;
   border: 1px solid #e6e6e6;
   border-radius: 5px;
+
 }
 .copyBtn, .reset{
   padding: 5px;
   box-shadow: 3px 3px 3px 3px #888888;
+  background-color: rgb(86, 87, 27);
   border: 1px solid #e6e6e6;
   border-radius: 5px;
-  margin: 10px;
+  margin: 5px;
+  font-style: oblique;
+  /* text-shadow: 0.5px 1px #d1b3b3; ; */
+  color:#e5d0d0;
+  
 }
+.copyBtn:hover{
+  background-color: #2c8d22;
+  color: antiquewhite;
+}
+.reset:hover{
+  background-color: #94461f;
+  color: rgb(215, 250, 222);
+}
+label:hover{
+  background-color: #7bb752d3;
+ color: #282919;
+  
+}
+.result:hover{
+  background-color: rgb(91, 190, 192);
+  color: rgb(44, 28, 8);
+}
+
 .radioIn{
   display: flex;
   float: right;
