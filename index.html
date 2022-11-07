@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Password Generator</title>
+</head>
+<body>
+    <div class="flexItem">
+        <div class="flex-box">
+      
+               
+          
+            <label>Input Range: <input class="inputNum" type="range" min="8" max="25" onchange="inputV()" value= "12"/></label>
+            <label class="inputV"> Password Length: 12 </label>
+                <h4 class="settings">Settings:</h4>
+                <label>Letters<input class="letters radioIn" type="checkbox" checked /></label>
+                <label>Mixed<input class="mixed radioIn" type="checkbox" /></label>
+                <label>Capital Letters<input class="cap radioIn" type="checkbox" /></label>
+                <label>Numbers<input class="nums radioIn" type="checkbox"  /></label>
+              
+                <button class="copyBtn password" >Generate Password</button>
+                <input id="myInput" class="result" placeholder="Generated Password" />
+                <button class="copyBtn" onclick="copy()">Copy Password</button>
+                <button class="reset" onclick="reset()">Reset</button>
+          
+           
+       </div>
+    </div>
+</body>
+<script src="./index.js"></script>
+</html>

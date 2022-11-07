@@ -1,0 +1,66 @@
+.flexItem{
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  margin-top: 150px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.flex-box{
+    display: flex;
+    width: 250px;
+    height: 475px;
+    flex-direction: column;
+    font-style: oblique;
+    padding: 5px;
+    box-shadow: 3px 3px 3px 3px #888888;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    margin: 15px 10px 15px 10px;
+}
+.settings{
+  margin: 5px;
+  font-style: oblique;
+ text-shadow: 0.5px 1px #901010; ;
+  color: rgb(180, 158, 134);
+}
+
+label{
+  color: rgb(19, 12, 2);
+  border: 1px solid #e6e6e6;
+  padding: 5px;
+  box-shadow: 3px 3px 3px 3px #888888;
+  background-color: bisque;
+  border-radius: 5px;
+  margin: 5px;
+}
+#myInput{
+  margin: 10px;
+  padding: 5px;
+  text-align: center;
+  box-shadow: 3px 3px 3px 3px #888888;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+}
+.copyBtn, .reset{
+  padding: 5px;
+  box-shadow: 3px 3px 3px 3px #888888;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  margin: 10px;
+}
+.radioIn{
+  display: flex;
+  float: right;
+}
+
+@media screen and (max-width: 480px) {
+  .flexItem{
+    min-height: fit-content;
+  }
+}
