@@ -1,52 +1,49 @@
 function passwordGenerator(input, characters, capitalLetters, lowercase,  nums, symbol){
     const alpha = Array.from(Array(94)).map((e, i)=> i+33);
     const newArr = alpha.map((e)=> String.fromCharCode(e));
-    var password = [];
+    const password = [];
     const re = /[A-Z]/g
     const num= /[0-9]/g
     const lower = /[a-z]/g
     const punctuation = /[.*+?^${}()|[\]\\]/g
-
-   if(capitalLetters){
-    const cap = newArr.join("").match(re);
-    for(let i = 0; i < input; i++){
-        password.push(cap[Math.ceil(Math.random()* cap.length-1)])
+for(let i = 0; i < input; i++){
+    if(characters){
+        password.push(newArr[Math.ceil(Math.random()* newArr.length - 1)])
     }
+
+    if(capitalLetters){
+        const newLetter = newArr.join("").match(re)
+        password.push(newLetter[Math.ceil(Math.random()* newLetter.length - 1)])
     }
     if(lowercase){
-        const cap = newArr.join("").match(lower);
-        for(let i = 0; i < input; i++){
-            password.push(cap[Math.ceil(Math.random()* cap.length-1)])
-        }
-        }
-  
-   if(nums){
-    const cap = newArr.join("").match(num);
-    for(let i = 0; i < input; i++){
-        password.push(cap[Math.ceil(Math.random()* cap.length-1)])
+        const newLetter = newArr.join("").match(lower)
+        password.push(newLetter[Math.ceil(Math.random()* newLetter.length - 1)])
     }
-   }
-   if(symbol){
-    const cap = newArr.join("").match(punctuation);
-    for(let i = 0; i < input; i++){
-        password.push(cap[Math.ceil(Math.random()* cap.length-1)])
-    }
-   }
 
-   if(characters){
-    for(let i = 0; i < input; i++){
-        password.push(newArr[Math.ceil(Math.random()* newArr.length-1 )])
+    if(nums){
+        const newLetter = newArr.join("").match(num)
+        password.push(newLetter[Math.ceil(Math.random()* newLetter.length - 1)])
     }
+
+    if(symbol){
+        const newLetter = newArr.join("").match(punctuation)
+        password.push(newLetter[Math.ceil(Math.random()* newLetter.length - 1)])
+    }
+
+}
+
+   if(password.length > input){
+    return password.slice(0, input).join("")
+   }else{
+    return password.join("")
    }
- 
-console.log(password)
-return password.join("");
 }
 // const upper = false;
 // const num = false;
-// const mix = true;
+// const lower = true;
 // const letters = false;
-// console.log(passwordGenerator(12, letters, upper, num, mix))
+// const punck = true;
+// console.log(passwordGenerator(12, letters, upper, lower, punck, num))
 const btn = document.querySelector(".password")
 
 function inputV(){
