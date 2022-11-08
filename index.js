@@ -105,7 +105,13 @@ function copy() {
 
   function reset(){
     //this function refresh the window
-    location.reload()
+    const input = 12
+    const password = passwordGenerator(12, false, false, false, false, false);
+    console.log(password)
+    //clear the function to provide all the parameters false and range nill
+    document.querySelector(".result").value = `${password}`
+    document.querySelector(".inputV").innerHTML = `Password Length: ${input}`
+    //input range return back to default password length
   }
 
 
