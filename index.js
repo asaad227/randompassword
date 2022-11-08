@@ -120,6 +120,7 @@ function copy() {
     document.querySelector(".symbol").checked = `${password}`
     document.querySelector(".result").value = `${password}`
     document.querySelector(".inputV").innerHTML = `Password Length: ${input}`
+    document.querySelector(".inputNum").value = `${input}`
     //input range return back to default password length
   }
 
