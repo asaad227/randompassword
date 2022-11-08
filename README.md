@@ -9,8 +9,9 @@
  ## Deployment
  - Deploy at vercel check this out 
  https://randompassword-asaad227.vercel.app/
-
- <image src="./passwordGenerator-1.png" margin="20px" width="150px" height="250px"/>
-  <image src="./passwordGenerator-2.png" margin="20px" width="150px" height="250px"/>
-    <image src="./passwordGenerator-3.png" margin="20px" width="150px" height="250px"/>
-      <image src="./passwordGenerator-4.png" margin="20px" width="150px" height="250px"/>
+<div style="display: flex, flex-direction: row" >
+ <image src="./passwordGenerator-1.png" margin="20px" width="200px" height="300px"/>
+  <image src="./passwordGenerator-2.png" margin="20px" width="200px" height="300px"/>
+    <image src="./passwordGenerator-3.png" margin="20px" width="200px" height="300px"/>
+      <image src="./passwordGenerator-4.png" margin="20px" width="200px" height="300px"/>
+      </div>
