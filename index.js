@@ -106,9 +106,18 @@ function copy() {
   function reset(){
     //this function refresh the window
     const input = 12
-    const password = passwordGenerator(12, false, false, false, false, false);
+    const letter = true
+    const password = passwordGenerator(0, false, false, false, false, false);
+    //as I am resetting the function need to provide all the false value 
     console.log(password)
     //clear the function to provide all the parameters false and range nill
+    document.querySelector(".letters").checked = `${letter}`
+    //as I have made this as default so make this checked as true
+    document.querySelector(".cap").checked = `${password}`
+    //all others are false value
+    document.querySelector(".lowercase").checked =`${password}`
+    document.querySelector(".nums").checked = `${password}`
+    document.querySelector(".symbol").checked = `${password}`
     document.querySelector(".result").value = `${password}`
     document.querySelector(".inputV").innerHTML = `Password Length: ${input}`
     //input range return back to default password length
