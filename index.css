@@ -33,7 +33,7 @@ font-style: oblique;
 }
 
 label{
-  color: rgb(19, 12, 2);
+  color: rgb(74, 50, 16);
   font-family: 'Roboto', sans-serif;
   border: 1px solid #e6e6e6;
   padding: 5px;
@@ -41,7 +41,7 @@ label{
   background-color: bisque;
   border-radius: 5px;
   margin: 5px;
-  text-shadow: 0.5px 1px #d1b3b3; ;
+  text-shadow: 0.5px 0.1px #d1b3b3; ;
 }
 #myInput{
   margin: 5px;

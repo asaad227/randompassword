@@ -20,31 +20,31 @@ for(let i = 0; i < input; i++){
    to password array to make random password. instead of newArr[i] here 
    i will be randomised */ 
 
-        password.push(newArr[Math.ceil(Math.random()* newArr.length)])
+        password.push(newArr[Math.ceil(Math.random()* newArr.length-1)])
     }
 
     if(capitalLetters){
         const newLetter = newArr.join("").match(re)
         // reg expression used to filter out selected charcters
-        password.push(newLetter[Math.ceil(Math.random()* newLetter.length)])
+        password.push(newLetter[Math.ceil(Math.random()* newLetter.length-1)])
     }
     if(lowercase){
         const newLetter = newArr.join("").match(lower)
-        password.push(newLetter[Math.ceil(Math.random()* newLetter.length)])
+        password.push(newLetter[Math.ceil(Math.random()* newLetter.length-1)])
     }
 
     if(nums){
         const newLetter = newArr.join("").match(num)
-        password.push(newLetter[Math.ceil(Math.random()* newLetter.length)])
+        password.push(newLetter[Math.ceil(Math.random()* newLetter.length-1)])
     }
 
     if(symbol){
         const newLetter = newArr.join("").match(punctuation)
-        password.push(newLetter[Math.ceil(Math.random()* newLetter.length - 1)])
+        password.push(newLetter[Math.ceil(Math.random()* newLetter.length-1)])
     }
 
 }
-
+console.log(password.length)
    if(password.length > input){
 /*password need to check with range selected if password is more then range 
 need to slice the password according to input range. When user selected more 
