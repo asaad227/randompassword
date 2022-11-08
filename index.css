@@ -2,7 +2,6 @@
   min-height: 100vh;
   padding: 4rem 0;
   flex: 1;
-  margin-top: 150px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -13,8 +12,6 @@
 
 .flex-box{
     display: flex;
-    width: 250px;
-    height: 490px;
     flex-direction: column;
     background-color: #b3acea4d;
     font-style: oblique;
@@ -91,6 +88,6 @@ label:hover{
 
 @media screen and (max-width: 480px) {
   .flexItem{
-    min-height: fit-content;
+    min-height: auto;
   }
 }
